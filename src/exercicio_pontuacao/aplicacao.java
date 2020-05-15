@@ -14,11 +14,11 @@ public class aplicacao {
 		System.out.println("----------------------------------------");
 		System.out.println("INFORME OS DADOS DO ÚLTIMO ANO");
 		System.out.println();
-		System.out.println("Quantas compras o cliente fez no último ano?");
-		System.out.println("Qual o ticket médio?");
-		System.out.println();
-		System.out.println("Quantas vezes o cliente atrasou o pagamento?");
-		System.out.println("A maioria das compras foi em dinheiro, cartão, ou boleto (D/C/B)?");
+		System.out.print("Quantas compras o cliente fez no último ano? ");
+		int quantCompras =sc.nextInt();
+		System.out.print("Qual o ticket médio? ");
+		double tiket = sc.nextDouble();
+
 		
 		
 		
