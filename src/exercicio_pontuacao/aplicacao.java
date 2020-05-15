@@ -41,6 +41,16 @@ public class aplicacao {
 		System.out.println("Score de volume de compras = " + scoreCompras);
 		System.out.println();
 		
+		int scoreInadimpl = 0;
+		if (atraso > 1 || quantCompras == 0) {
+			scoreInadimpl = 0;
+		} else if (quantCompras > 0 && atraso == 1) {
+			scoreInadimpl = 15;
+		} else if (quantCompras > 0 && atraso == 0) {
+			scoreInadimpl = 30;
+		}
+		System.out.println("Score de inadimplência = " + scoreInadimpl);
+		
 		int scorePagam = 0;
 		if (quantCompras > 0 && formaPag == 'D') {
 			scorePagam += 5;
@@ -49,6 +59,18 @@ public class aplicacao {
 		}
 		System.out.println("Score de forma de pagamento = " + scorePagam);
 		System.out.println();
+		
+		int scoreTotal = scoreCompras + scoreInadimpl + scorePagam;
+		String classCliente = "";
+		if (scoreTotal == 0 || scoreTotal <= 25) {
+			classCliente = "BRONZE";
+		} else if (scoreTotal > 25 || scoreTotal <= 75) {
+			classCliente = "PRATA";
+		} else if (scoreTotal > 75) {
+			classCliente = "OURO";
+		}
+
+		System.out.println("Classificação final = CLIENTE " + classCliente);
 	}
 
 }
