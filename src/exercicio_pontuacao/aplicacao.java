@@ -18,6 +18,11 @@ public class aplicacao {
 		int quantCompras =sc.nextInt();
 		System.out.print("Qual o ticket médio? ");
 		double tiket = sc.nextDouble();
+		System.out.println();
+		System.out.print("Quantas vezes o cliente atrasou o pagamento? ");
+		int atraso = sc.nextInt();
+		System.out.print("A maioria das compras foi em dinheiro, cartão, ou boleto (D/C/B)? ");
+		char formaPag= sc.next().toUpperCase().charAt(0);
 
 		
 		
