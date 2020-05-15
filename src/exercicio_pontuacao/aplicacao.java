@@ -40,6 +40,15 @@ public class aplicacao {
 		}
 		System.out.println("Score de volume de compras = " + scoreCompras);
 		System.out.println();
+		
+		int scorePagam = 0;
+		if (quantCompras > 0 && formaPag == 'D') {
+			scorePagam += 5;
+		} else if (quantCompras > 0 && (formaPag == 'C' || formaPag == 'B')) {
+			scorePagam += 10;
+		}
+		System.out.println("Score de forma de pagamento = " + scorePagam);
+		System.out.println();
 	}
 
 }
